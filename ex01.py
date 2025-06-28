@@ -79,6 +79,10 @@ def mostrar_resultado(fahrenheit):
 
 
 # --- Bloco Principal do Programa ---
+# if __name__ == "__main__": função especial que indica que este é o ponto de entrada do programa.
+# Ela é executada quando o script é rodado diretamente, mas não quando importado como um módulo.
+# Isso é útil para organizar o código e evitar que certas partes sejam executadas quando o módulo é importado.
+
 # Esta é a parte que orquestra a chamada das funções.
 if __name__ == "__main__":
     # 1. Chama a função para ler o valor de entrada
