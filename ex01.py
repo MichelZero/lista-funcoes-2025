@@ -20,12 +20,39 @@ def ler_temperatura():
     Retorna:
         float: A temperatura em graus Celsius.
     """
-    # Usamos um loop para garantir que o usuário digite um número válido
+    
+    # solução 01 - mais simples, mas não valida a entrada do usuário
+    # # Usamos um loop para garantir que o usuário digite um número válido
     while True:
         try:
             celsius = float(input("Digite a temperatura em graus Celsius: "))
             return celsius
         except ValueError:
+            print("Erro: Por favor, digite um valor numérico válido.")
+            
+    # solução 02 - mais robusta, valida a entrada do usuário sem usar try/except
+    # Aqui, vamos garantir que o usuário digite um número válido,        
+    # permitindo apenas números com um ponto decimal e dígitos.
+    # O loop continuará até que uma entrada válida seja fornecida.
+    while True:
+        # 1. Lê a entrada do usuário e remove espaços em branco extras
+        temp_str = input("Digite a temperatura em graus Celsius: ").strip()
+
+        # 2. Cria uma cópia da string para manipulação
+        # Remove o sinal de negativo, se houver, para simplificar as verificações
+        check_str = temp_str
+        if check_str.startswith('-'):
+            check_str = check_str[1:] # Pega a string a partir do segundo caractere
+
+        # 3. Faz a validação da string
+        # A string é válida se:
+        #   a) Contém no máximo um ponto decimal ('.').
+        #   b) E, ao remover esse único ponto, o que sobra são apenas dígitos.
+        if check_str.count('.') <= 1 and check_str.replace('.', '', 1).isdigit():
+            # Se a validação passar, converte a string original para float e retorna
+            return float(temp_str)
+        else:
+            # Caso contrário, informa o erro e o loop continua
             print("Erro: Por favor, digite um valor numérico válido.")
 
 
