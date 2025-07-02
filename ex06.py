@@ -10,10 +10,10 @@
 # seguida, calcule os descontos: 11% para o Imposto de Renda e 8% para 
 # o INSS, ambos sobre o salário bruto. Por fim, calcule o salário líquido.
 #Fórmulas:
-SALARIO_BRUTO = HORAS_TRABALHADAS * VALOR_HORA
-DESCONTO_IR = SALARIO_BRUTO * 0.11
-DESCONTO_INSS = SALARIO_BRUTO * 0.08
-SALARIO_LIQUIDO = SALARIO_BRUTO - DESCONTO_IR - DESCONTO_INSS
+# SALARIO_BRUTO = HORAS_TRABALHADAS * VALOR_HORA
+# DESCONTO_IR = SALARIO_BRUTO * 0.11
+# DESCONTO_INSS = SALARIO_BRUTO * 0.08
+# SALARIO_LIQUIDO = SALARIO_BRUTO - DESCONTO_IR - DESCONTO_INSS
 
 # O programa deve apresentar um resumo (holerite) contendo o salário bruto, o
 # valor descontado do IR, o valor descontado do INSS e o salário líquido final.

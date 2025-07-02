@@ -9,7 +9,7 @@
 # (em Kg) e a sua altura (em metros). Após calcular o IMC, o 
 # programa deve determinar a classificação da pessoa com base na tabela abaixo.
 # Fórmula:
-IMC = PESO / (ALTURA ** 2)
+# IMC = PESO / (ALTURA ** 2)
 
 # Tabela de Classificação:
 #   Abaixo de 18.5: Abaixo do peso
